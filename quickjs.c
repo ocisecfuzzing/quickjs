@@ -32122,7 +32122,7 @@ static __exception int resolve_labels(JSContext *ctx, JSFunctionDef *s)
 
     /* check that there were no missing labels */
    for(i = 0; i < s->label_count; i++) {
-        if(label_slots[i].first_reloc == NULL) {
+        if(label_slots[i].first_reloc != NULL) {
            exit(0);
         }
     }
